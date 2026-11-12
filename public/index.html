@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cards Agains Mankind</title>
+  <link rel="stylesheet" href="/style.css">
+  <script defer src="/socket.io/socket.io.js"></script>
+  <script defer src="/game.js"></script>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Cards Agains Mankind<span>.</span></h1>
+      <div class="actions">
+        <p id="connection" role="status">Connecting…</p>
+        <a href="/invite.html" target="_blank" rel="noopener">Invite page</a>
+      </div>
+    </header>
+    <form id="join" hidden>
+      <label for="name">Your nickname</label>
+      <div class="actions"><input id="name" maxlength="24" autocomplete="nickname" required><button>Join game</button></div>
+    </form>
+    <p id="error" role="alert"></p>
+    <section id="game" hidden>
+      <div>
+        <div id="board" class="board"></div>
+        <div id="hand-settings" class="board" hidden>
+          <label for="hand-size">Hand size</label>
+          <select id="hand-size"></select>
+        </div>
+        <details id="pack-selector" class="board" hidden>
+          <summary id="pack-summary">Card packs</summary>
+          <div id="pack-bulk-actions" class="actions"></div>
+          <p id="pack-help" role="status" hidden>Select packs with at least one prompt and one answer.</p>
+          <div id="pack-options"></div>
+        </details>
+      </div>
+      <aside>
+        <h2>Players</h2>
+        <ul id="players"></ul>
+        <div id="lobby-actions" class="actions"></div>
+      </aside>
+    </section>
+    <dialog id="return-dialog" aria-labelledby="return-dialog-title" aria-describedby="return-dialog-message">
+      <form method="dialog">
+        <h2 id="return-dialog-title">Return to lobby?</h2>
+        <p id="return-dialog-message">This will end the match, clear all scores, and send everyone back to the lobby.</p>
+        <div class="actions">
+          <button value="cancel" class="secondary" autofocus>Keep playing</button>
+          <button value="confirm">Return to lobby</button>
+        </div>
+      </form>
+    </dialog>
+    <footer><p>Card text by <a href="https://www.cardsagainsthumanity.com/">Cards Against Humanity</a>, sourced from <a href="https://github.com/crhallberg/json-against-humanity">JSON Against Humanity</a> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p></footer>
+  </main>
+</body>
+</html>

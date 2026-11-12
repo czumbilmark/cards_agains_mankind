@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Invite friends · Cards Agains Mankind</title>
+  <link rel="stylesheet" href="/style.css">
+  <script defer src="/invite.js"></script>
+</head>
+<body>
+  <main>
+    <header><h1>Cards Agains Mankind<span>.</span></h1></header>
+    <section class="invite" aria-labelledby="invite-heading">
+      <h2 id="invite-heading">Invite friends</h2>
+      <p>Keep the game server running on this computer. On a phone connected to the same network, scan the QR code or open the game link.</p>
+      <p>The first player to join becomes the in-game host.</p>
+      <p id="invite-status" role="status">Finding game links…</p>
+      <div id="invite-links"></div>
+    </section>
+    <template id="invite-template">
+      <div class="board invite-card">
+        <a class="invite-qr"><img width="180" height="180" alt="Scan to open the game"></a>
+        <div>
+          <label>Game link
+            <input type="url" readonly>
+          </label>
+          <div class="actions"><button type="button">Copy link</button><a class="invite-open">Open game</a></div>
+          <p class="copy-status" role="status"></p>
+        </div>
+      </div>
+    </template>
+  </main>
+</body>
+</html>

@@ -1,0 +1,36 @@
+{
+  "prompts": [
+    "My weekend plans were canceled because of ___.",
+    "The secret ingredient is ___.",
+    "The museum's newest exhibit is ___.",
+    "My group chat will never recover from ___.",
+    "The hotel charged me extra for ___.",
+    "The real reason the meeting ran late was ___."
+  ],
+  "answers": [
+    "A very judgmental pigeon.",
+    "An emergency wheel of cheese.",
+    "A spreadsheet with feelings.",
+    "A suspiciously warm sock.",
+    "Three raccoons in a raincoat.",
+    "An aggressively helpful printer.",
+    "A potato with a LinkedIn profile.",
+    "The world's smallest parade.",
+    "A toaster with stage fright.",
+    "A highly organized goose.",
+    "A coupon for one bad decision.",
+    "A PowerPoint about another PowerPoint.",
+    "The last slice of pizza, under armed guard.",
+    "A disco ball in a dentist's office.",
+    "A strongly worded sticky note.",
+    "A karaoke duet with the Wi-Fi router.",
+    "An inflatable briefcase.",
+    "One dramatic cape.",
+    "A bag of entirely decorative croutons.",
+    "A perfectly timed elevator ding.",
+    "The emergency backup lasagna.",
+    "A committee of rubber ducks.",
+    "A voicemail from the moon.",
+    "A haunted vending machine."
+  ]
+}
