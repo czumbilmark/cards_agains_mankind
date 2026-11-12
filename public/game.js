@@ -211,7 +211,7 @@ socket.on('state', state => {
     if (isHost) {
       const actions = element('div', '', board, 'actions');
       button(actions, 'Start match', 'start').disabled = !canStart || state.deckSelection?.playable === false;
-      button(actions, 'Add two bots', 'bots', undefined, 'secondary').disabled =
+      button(actions, 'Add bot', 'bots', undefined, 'secondary').disabled =
         state.players.length >= 10 || state.players.filter(player => player.bot).length >= 2;
     }
     return;

@@ -339,16 +339,19 @@ io.on('connection', socket => {
         leave(player);
         player = undefined;
         return reply({});
-      case 'bots':
+      case 'bots': {
         if (!isHost || phase !== 'lobby') break;
-        for (const name of ['Bot Waffle', 'Bot Pickle']) {
-          const color = availableColor();
-          if (!color || active.some(seat => seat.bot && seat.name === name)) continue;
-          const id = randomUUID();
-          players.set(id, { id, name, color, bot: true, score: 0, hand: [] });
+        const name = ['Bot Waffle', 'Bot Pickle'].find(name =>
+          !active.some(seat => seat.bot && seat.name === name));
+        const color = availableColor();
+        if (!name || !color) {
+          return reply({ error: 'There is no room for another bot.' });
         }
+        const id = randomUUID();
+        players.set(id, { id, name, color, bot: true, score: 0, hand: [] });
         publish();
         return reply({});
+      }
       case 'packs':
         if (!isHost || phase !== 'lobby' || !setPackSelection(input.card)) break;
         publish();
