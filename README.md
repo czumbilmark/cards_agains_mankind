@@ -9,3 +9,9 @@ A browser party game for people on the same local network.
 The first player to join becomes the host and can choose the card packs and hand size. To play solo, join from the host computer and click **Add bot** twice.
 
 Card text is by [Cards Against Humanity](https://www.cardsagainsthumanity.com/) and comes from the official packs in [JSON Against Humanity](https://github.com/crhallberg/json-against-humanity). The card text is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+
+## About this project
+
+I built this game for personal use. Feel free to copy the project, modify your copy, or share it. Please follow the license above when sharing card text.
+
+The game is provided as-is, with no guarantees about quality or reliability. Use it at your own risk. I take no responsibility for how others use it, and I welcome suggestions for improvement.
